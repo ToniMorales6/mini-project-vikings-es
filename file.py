@@ -7,7 +7,7 @@ def crear_equipo_viking(guerra, nombres):
 
 def crear_equipo_saxon(guerra, numero_saxones):
     for i in range(0, numero_saxones):
-        guerra.addSaxon(Saxon(50, random.randint(0,100)))
+        guerra.addSaxon(Saxon(100, random.randint(0,100)))
 
 def luchar(guerra):
     ronda = 1
@@ -18,12 +18,11 @@ def luchar(guerra):
         print(f"Ronda {ronda}. Estado: {guerra.showStatus()}")
         ronda += 1
 
+
+
 vikingos = ["Toni", "Maksym", "Ivan", "Marc"]
-saxons = 10
-
+saxons = 4
 guerra = War()
-
 crear_equipo_viking(guerra, vikingos)
 crear_equipo_saxon(guerra, saxons)
 luchar(guerra)
-

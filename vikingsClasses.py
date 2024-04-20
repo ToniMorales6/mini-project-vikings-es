@@ -1,7 +1,8 @@
 import random
 
-# Soldier
-
+''' 
+    Team: Antonio Morales, Maksym Vaskyn, Iván Seldas, Marc Cabré
+'''
 
 class Soldier:
     def __init__(self, health: float, strength: float):
@@ -110,7 +111,7 @@ class War2:
 
         result = saxon_selected.receiveDamage(viking_selected.attack())
 
-        if "died in combat" in result:
+        if saxon_selected.health <= 0:
             self.saxonArmy.remove(saxon_selected)
         
         return result
@@ -122,7 +123,7 @@ class War2:
 
         result = viking_selected.receiveDamage(saxon_selected.attack())
         print(len(self.vikingArmy))
-        if "died in combat" in result:
+        if viking_selected.health <= 0:
             self.vikingArmy.remove(viking_selected)
         
         return result
