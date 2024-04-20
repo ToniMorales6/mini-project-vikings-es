@@ -7,6 +7,7 @@ class Soldier:
     def __init__(self, health: float, strength: float):
         self.health = health
         self.strength = strength
+
     
     def attack(self):
         return self.strength
