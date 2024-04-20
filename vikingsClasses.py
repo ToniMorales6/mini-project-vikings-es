@@ -30,7 +30,7 @@ class Viking(Soldier):
 
 class Saxon(Soldier):
     def __init__(self, health, strength):
-        # your code here
+        super.__init__(health)
 
     def receiveDamage(self, damage):
         # your code here
