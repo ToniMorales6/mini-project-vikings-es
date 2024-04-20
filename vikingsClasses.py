@@ -50,7 +50,7 @@ class Saxon(Soldier):
             return ("A Saxon has died in combat")
 
 # Davicente
-"""
+
 class War():
     def __init__(self):
         # your code here
@@ -93,4 +93,4 @@ class War2:
         # your code here
 
     pass
-    """
+    
