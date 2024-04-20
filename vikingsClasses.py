@@ -33,7 +33,6 @@ class Viking(Soldier):
         else:
             return f'{self.name} has died in act of combat'
 
-"""
 # Saxon
 
 class Saxon(Soldier):
@@ -87,5 +86,3 @@ class War2:
         # your code here
 
     pass
-    
-"""
