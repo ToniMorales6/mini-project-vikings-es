@@ -60,31 +60,25 @@ class War():
         self.saxonArmy.append(saxon)
     
     def vikingAttack(self):
-        id_viking = random.randrange(len(self.vikingArmy)-1)
-        id_saxon = random.randrange(len(self.saxonArmy)-1)
-
-        viking_selected = self.vikingArmy[id_viking]
-        saxon_selected = self.saxonArmy[id_saxon]
+        viking_selected = random.choice(self.vikingArmy)
+        saxon_selected = random.choice(self.saxonArmy)
 
         result = saxon_selected.receiveDamage(viking_selected.attack())
 
-        if "died in combat" in result:
-            self.saxonArmy.pop(id_saxon)
+        if saxon_selected.health <= 0:
+            self.saxonArmy.remove(saxon_selected)
         
         return result
 
     
     def saxonAttack(self):
-        id_viking = random.randrange(len(self.vikingArmy)-1)
-        id_saxon = random.randrange(len(self.saxonArmy)-1)
-
-        viking_selected = self.vikingArmy[id_viking]
-        saxon_selected = self.saxonArmy[id_saxon]
+        viking_selected = random.choice(self.vikingArmy)
+        saxon_selected = random.choice(self.saxonArmy)
 
         result = viking_selected.receiveDamage(saxon_selected.attack())
-
-        if "died in combat" in result:
-            self.vikingArmy.pop(id_viking)
+        
+        if viking_selected.health <= 0:
+            self.vikingArmy.remove(viking_selected)
         
         return result
 
@@ -111,31 +105,25 @@ class War2:
         self.saxonArmy.append(saxon)
     
     def vikingAttack(self):
-        id_viking = random.randrange(len(self.vikingArmy)-1)
-        id_saxon = random.randrange(len(self.saxonArmy)-1)
-
-        viking_selected = self.vikingArmy[id_viking]
-        saxon_selected = self.saxonArmy[id_saxon]
+        viking_selected = random.choice(self.vikingArmy)
+        saxon_selected = random.choice(self.saxonArmy)
 
         result = saxon_selected.receiveDamage(viking_selected.attack())
 
         if "died in combat" in result:
-            self.saxonArmy.pop(id_saxon)
+            self.saxonArmy.remove(saxon_selected)
         
         return result
 
     
     def saxonAttack(self):
-        id_viking = random.randrange(len(self.vikingArmy)-1)
-        id_saxon = random.randrange(len(self.saxonArmy)-1)
-
-        viking_selected = self.vikingArmy[id_viking]
-        saxon_selected = self.saxonArmy[id_saxon]
+        viking_selected = random.choice(self.vikingArmy)
+        saxon_selected = random.choice(self.saxonArmy)
 
         result = viking_selected.receiveDamage(saxon_selected.attack())
-
+        print(len(self.vikingArmy))
         if "died in combat" in result:
-            self.vikingArmy.pop(id_viking)
+            self.vikingArmy.remove(viking_selected)
         
         return result
 
